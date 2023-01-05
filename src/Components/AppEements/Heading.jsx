@@ -43,7 +43,7 @@ function Header(props) {
     >
       <Show below="lg">
         <Flex
-          colorScheme="black"
+          colorScheme="teal"
           alignSelf={"flex-end"}
           mt={"15px"}
           mr={"30px"}
