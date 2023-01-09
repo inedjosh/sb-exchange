@@ -11,6 +11,7 @@ import React from "react";
 import BodyText from "../Components/TextElements/BodyText";
 import HeadingText from "../Components/TextElements/HeadingText";
 import ButtonDiv from "../Components/UIElements/Button";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Signup(props) {
   return (
@@ -32,7 +33,13 @@ function Signup(props) {
       <Flex flexDirection={["column", "column", "column", "row"]}>
         <Show above="lg">
           <Box flex=".4" h="90vh" overflow={"hidden"} borderRadius="40">
-            <Image src="reg.png" w="100%" h="100%" objectFit={"cover"} />
+            <LazyLoadImage
+              src="reg.png"
+              w="100%"
+              h="100%"
+              objectFit={"cover"}
+              alt="registration-image"
+            />
           </Box>
         </Show>
         <Flex

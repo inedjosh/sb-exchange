@@ -27,6 +27,7 @@ import ButtonDiv from "../../UIElements/Button";
 import { Link, useLocation, useHref } from "react-router-dom";
 import { HiOutlineMenu } from "react-icons/hi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Header(props) {
   const [isActive, setIsActive] = useState("");
@@ -168,11 +169,14 @@ function Header(props) {
           justifyContent={"flex-end"}
           mt={["15px", "10px", "0"]}
         >
-          <Image
+          <LazyLoadImage
             src="hero-img.png"
             w={["85%", null, null, "90%"]}
             alignSelf="flex-end"
             display="flex"
+            alt="home-image"
+            // effect="blur"
+            // PlaceholderSrc={PlaceholderImage}
           />
         </Box>
       </Flex>

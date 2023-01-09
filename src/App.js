@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
-        <Route path="/faq" element={<Faq />} />
+        <Route path="/faq" element={<Faq />} />       
         <Route path="/rates" element={<Rates />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;         

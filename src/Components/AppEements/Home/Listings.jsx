@@ -2,6 +2,7 @@ import { ArrowDownIcon, ArrowUpIcon } from "@chakra-ui/icons";
 import { Image, Box, Flex } from "@chakra-ui/react";
 import React from "react";
 import BodyText from "../../TextElements/BodyText";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Listings = () => {
   const coins = [
@@ -50,7 +51,7 @@ const Listings = () => {
       >
         {coins.map((coin) => (
           <Flex key={coin.id} px={[null, null, "20px", "10"]}>
-            <Image
+            <LazyLoadImage
               src={coin.img}
               alt={coin.name}
               w={[null, null, "15px", "5"]}

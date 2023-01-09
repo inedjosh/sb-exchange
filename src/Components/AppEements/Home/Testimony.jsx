@@ -5,6 +5,7 @@ import HeadingText from "../../TextElements/HeadingText";
 import Button from "../../UIElements/Button";
 import TestimonyCard from "../../UIElements/TestimonyCard";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 // Import Swiper styles
 import "swiper/css";
@@ -93,10 +94,11 @@ const Testimonials = () => {
                         alignItems={"space-between"}
                       >
                         <Flex flexDirection={"column"} w={"100%"}>
-                          <Image
+                          <LazyLoadImage
                             src={item.img}
                             w={"100%"}
                             objectFit={"cover"}
+                            alt={item.name}
                           />
                           <Text mt={"10px"}>{item.testimony}</Text>
                         </Flex>
@@ -142,7 +144,7 @@ const Testimonials = () => {
                         px={"10px"}
                         py={"20px"}
                       >
-                        <Image src={item.img} />
+                        <LazyLoadImage alt={item.name} src={item.img} />
                         <Text>{item.testimony}</Text>
                         <Box
                           mt={"20px"}
@@ -173,21 +175,23 @@ const Testimonials = () => {
         flexDirection="column"
         position={"relative"}
       >
-        <Image
+        <LazyLoadImage
           src="hand1.png"
           position={"absolute"}
           left={["-100px", "-100px", "-120px", "0px"]}
           top={"0"}
           w={["250px"]}
+          alt={"hand"}
         />
 
-        <Image
+        <LazyLoadImage
           src="dots.png"
           position={"absolute"}
           inset={"0"}
           h={"100%"}
           w={"100vw"}
           zIndex={"20px"}
+          alt="dots"
         />
         <HeadingText
           mb="5"
@@ -201,21 +205,23 @@ const Testimonials = () => {
         <Button>Get me started</Button>
 
         <Hide below="lg">
-          <Image
+          <LazyLoadImage
             src="hand2.png"
             position={"absolute"}
             right={["0px"]}
             top={"0"}
             w={["200px"]}
+            alt={"hand"}
           />
         </Hide>
         <Hide above="lg">
-          <Image
+          <LazyLoadImage
             src="hand2mobile.png"
             position={"absolute"}
             right={["0px"]}
             top={"0"}
             w={["120px"]}
+            alt="mobile"
           />
         </Hide>
       </Flex>

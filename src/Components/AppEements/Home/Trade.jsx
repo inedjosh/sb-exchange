@@ -1,19 +1,9 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import {
-  Box,
-  Heading,
-  Image,
-  Link,
-  Flex,
-  Icon,
-  AspectRatio,
-} from "@chakra-ui/react";
+import { Box, Link, Flex, AspectRatio } from "@chakra-ui/react";
 import React, { useState } from "react";
 import BodyText from "../../TextElements/BodyText";
 import HeadingText from "../../TextElements/HeadingText";
 import Button from "../../UIElements/Button";
-import Card from "../../UIElements/Card";
-import { MdSwapHorizontalCircle } from "react-icons/md";
 import AppSlider from "../../UIElements/Slider";
 
 const Trade = () => {

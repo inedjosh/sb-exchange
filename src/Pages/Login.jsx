@@ -11,6 +11,7 @@ import React from "react";
 import BodyText from "../Components/TextElements/BodyText";
 import HeadingText from "../Components/TextElements/HeadingText";
 import ButtonDiv from "../Components/UIElements/Button";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Login(props) {
   return (
@@ -33,7 +34,13 @@ function Login(props) {
       <Flex flexDirection={["column", "column", "column", "row"]}>
         <Show above="lg">
           <Box flex=".4" h="90vh" overflow={"hidden"} borderRadius="40">
-            <Image src="login.png" w="100%" h="100%" objectFit={"cover"} />
+            <LazyLoadImage
+              src="login.png"
+              w="100%"
+              h="100%"
+              objectFit={"cover"}
+              alt="login-description"
+            />
           </Box>
         </Show>
         <Flex

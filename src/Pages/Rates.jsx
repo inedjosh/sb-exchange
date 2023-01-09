@@ -6,6 +6,7 @@ import WhiteSpace from "../Components/AppEements/WhiteSpace";
 import BodyText from "../Components/TextElements/BodyText";
 import HeadingText from "../Components/TextElements/HeadingText";
 import ButtonDiv from "../Components/UIElements/Button";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Rates(props) {
   return (
@@ -18,7 +19,13 @@ function Rates(props) {
           overflow={"hidden"}
           borderRadius={"20"}
         >
-          <Image src="rate.png" h={"100%"} w={"100%"} objectFit={"cover"} />
+          <LazyLoadImage
+            src="rate.png"
+            h={"100%"}
+            w={"100%"}
+            objectFit={"cover"}
+            alt="hero-description"
+          />
         </Box>
       </Flex>
       <Flex
@@ -159,7 +166,12 @@ function Rates(props) {
           </Flex>
         </Flex>
         <Box width={"220px"} mt={["20px", "20px", "20px", 0]}>
-          <Image src="girls.png" width={"100%"} objectFit={"cover"} />
+          <LazyLoadImage
+            src="girls.png"
+            width={"100%"}
+            objectFit={"cover"}
+            alt="footer-img"
+          />
         </Box>
       </Flex>
       <Footer />
