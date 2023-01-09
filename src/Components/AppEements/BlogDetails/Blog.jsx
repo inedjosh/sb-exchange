@@ -1,8 +1,8 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
 import React from "react";
-import { blogs } from "../../../model";
 import BodyText from "../../TextElements/BodyText";
 import HeadingText from "../../TextElements/HeadingText";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Blog({ blog }) {
   const lists = [
@@ -39,7 +39,13 @@ function Blog({ blog }) {
       </BodyText>
       <HeadingText py="8">{blog.title}</HeadingText>
       <Box h="400" w="100%" overflow={"hidden"} borderRadius="40">
-        <Image h="100%" objectFit={"cover"} w="100%" src={blog.img} />
+        <LazyLoadImage
+          h="100%"
+          objectFit={"cover"}
+          w="100%"
+          src={blog.img}
+          alt={"hero-description"}
+        />
       </Box>
       <Flex flexDirection={["column", "column", "row"]} py="10">
         <Box flex=".2">
@@ -54,7 +60,7 @@ function Blog({ blog }) {
         </Box>
         <Flex flexDirection={"column"} flex=".8">
           <Flex alignItems={"center"} py="4">
-            <Image src={blog.author_img} w="14" />
+            <LazyLoadImage src={blog.author_img} w="14" alt={"blog image"} />
             <Box ml="2">
               <HeadingText fontSize="18">{blog.author}</HeadingText>
               <BodyText fontSize="13">{blog.position}</BodyText>

@@ -2,6 +2,7 @@ import { Box, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 import BodyText from "../../TextElements/BodyText";
 import HeadingText from "../../TextElements/HeadingText";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function WeAreReliable(props) {
   return (
@@ -15,11 +16,12 @@ function WeAreReliable(props) {
         borderRadius={"54px"}
       >
         <Box width={"100%"} h={["300px"]}>
-          <Image
+          <LazyLoadImage
             src="lady-office.png"
             width={"100%"}
             h={"100%"}
             objectFit={"cover"}
+            alt={"lady-office"}
           />
         </Box>
         <Box

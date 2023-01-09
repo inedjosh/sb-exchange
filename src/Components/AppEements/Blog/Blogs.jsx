@@ -4,6 +4,7 @@ import { blogs } from "../../../model";
 import { truncate } from "../../../utils/truncate";
 import BodyText from "../../TextElements/BodyText";
 import HeadingText from "../../TextElements/HeadingText";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Blogs(props) {
   const displayMainTitle = truncate(blogs[0].title, 63);
@@ -20,12 +21,18 @@ function Blogs(props) {
       >
         <Flex
           width={["100%", "95%", "90%", "50%"]}
-          h={["200px", "200px", "200px", "400"]}
+          h={["200px", "200px", "400px"]}
           borderRadius={"40"}
           overflow="hidden"
           justifyContent={"center"}
         >
-          <Image src={blogs[0].img} w={["100%"]} h="100%" objectFit={"cover"} />
+          <LazyLoadImage
+            src={blogs[0].img}
+            w={["100%"]}
+            h="100%"
+            objectFit={"cover"}
+            alt={blogs[0].title}
+          />
         </Flex>
         <Flex
           flexDirection={"column"}
@@ -49,7 +56,12 @@ function Blogs(props) {
             Read More
           </Link>
           <Flex py="2" alignItems={"center"}>
-            <Image src={blogs[0].author_img} w="50px" />
+            <Image
+              src={blogs[0].author_img}
+              w="50px"
+              alt={blogs[0].title}
+              h="50px"
+            />
             <Flex flexDirection={"column"} pl={"5px"}>
               <HeadingText fontSize={"14px"}> {blogs[0].author}</HeadingText>
               <BodyText fontSize={"12px"}> {blogs[0].position}</BodyText>
@@ -72,11 +84,12 @@ function Blogs(props) {
                 borderRadius={"20px"}
                 overflow={"hidden"}
               >
-                <Image
+                <LazyLoadImage
                   src={blog.img}
                   w={"100%"}
                   h={"100%"}
                   objectFit={"cover"}
+                  alt={blog.title}
                 />
               </Box>
               <Box py="2">

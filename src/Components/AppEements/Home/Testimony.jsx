@@ -174,8 +174,9 @@ const Testimonials = () => {
         alignItems="center"
         flexDirection="column"
         position={"relative"}
+        zIndex={"-10px"}
       >
-        <LazyLoadImage
+        <Image
           src="hand1.png"
           position={"absolute"}
           left={["-100px", "-100px", "-120px", "0px"]}
@@ -184,7 +185,7 @@ const Testimonials = () => {
           alt={"hand"}
         />
 
-        <LazyLoadImage
+        <Image
           src="dots.png"
           position={"absolute"}
           inset={"0"}
@@ -205,7 +206,7 @@ const Testimonials = () => {
         <Button>Get me started</Button>
 
         <Hide below="lg">
-          <LazyLoadImage
+          <Image
             src="hand2.png"
             position={"absolute"}
             right={["0px"]}
@@ -215,7 +216,7 @@ const Testimonials = () => {
           />
         </Hide>
         <Hide above="lg">
-          <LazyLoadImage
+          <Image
             src="hand2mobile.png"
             position={"absolute"}
             right={["0px"]}

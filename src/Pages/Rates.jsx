@@ -15,13 +15,13 @@ function Rates(props) {
       <Flex justifyContent={"center"} alignItems="center">
         <Box
           width={["90%", "90%", "90%", "70%"]}
-          h={["150px"]}
+          h={["150px", "200px", "300px"]}
           overflow={"hidden"}
           borderRadius={"20"}
         >
           <LazyLoadImage
             src="rate.png"
-            h={"100%"}
+            h={["100%"]}
             w={"100%"}
             objectFit={"cover"}
             alt="hero-description"
