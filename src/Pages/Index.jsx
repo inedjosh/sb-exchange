@@ -1,4 +1,4 @@
-import { Box, Icon, Show } from "@chakra-ui/react";
+import { Box, Icon, Show, Link } from "@chakra-ui/react";
 import React from "react";
 import Footer from "../Components/AppEements/Footer";
 import Header from "../Components/AppEements/Home/Header";
@@ -16,16 +16,18 @@ function Index(props) {
         <Listings />
       </Show>
       <Box position={"absolute"} zIndex={10}>
-        <Icon
-          boxShadow={"rgba(0, 0, 0, 0.35) 0px 5px 15px"}
-          as={IoLogoWhatsapp}
-          w={["80px"]}
-          h={["80px"]}
-          color={"#25D366"}
-          position={"fixed"}
-          bottom={"40px"}
-          right={"15px"}
-        />
+        <Link target="_blank" href="https://wa.link/fxslvr">
+          <Icon
+            boxShadow={"rgba(0, 0, 0, 0.35) 0px 5px 15px"}
+            as={IoLogoWhatsapp}
+            w={["80px"]}
+            h={["80px"]}
+            color={"#25D366"}
+            position={"fixed"}
+            bottom={"40px"}
+            right={"15px"}
+          />
+        </Link>
       </Box>
       <Trade />
       <KnowMore />

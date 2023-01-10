@@ -5,6 +5,7 @@ import {
   ListItem,
   UnorderedList,
   Icon,
+  Text,
 } from "@chakra-ui/react";
 import React from "react";
 import { FaFacebookF } from "react-icons/fa";
@@ -17,15 +18,15 @@ const Footer = () => {
   const navOne = [
     {
       id: 1,
-      link: "/",
+      link: "#",
       name: " Jonco street karu city college \n FCT Abuja",
     },
   ];
   const navTwo = [
     {
       id: 1,
-      link: "tel:+2348107764537",
-      name: " Phone: +234 810 776 4537 ",
+      link: "tel:+2348107609045",
+      name: "Phone: +2348 10760 9045",
     },
     {
       id: 2,
@@ -48,7 +49,7 @@ const Footer = () => {
     // },
     {
       id: 3,
-      link: "/https://www.instagram.com/sb_agency_/",
+      link: "https://www.instagram.com/sb_agency_/",
       name: "Instagram",
       icon: AiOutlineInstagram,
     },
@@ -111,9 +112,7 @@ const Footer = () => {
                   pl="0"
                   fontSize={"14"}
                 >
-                  <Link color="#fff" href={item.link}>
-                    {item.name}
-                  </Link>
+                  <Text color="#fff">{item.name}</Text>
                 </ListItem>
               ))}
             </UnorderedList>
@@ -133,7 +132,7 @@ const Footer = () => {
                   ml="-4"
                 >
                   <Icon as={item.icon} color="#fff" mr="2" />
-                  <Link color="#fff" href={item.link}>
+                  <Link color="#fff" href={item.link} target="_blank">
                     {item.name}
                   </Link>
                 </ListItem>

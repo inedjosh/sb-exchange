@@ -1,31 +1,23 @@
-import {
-  Link,
-  Box,
-  Flex,
-  Image,
-  Input,
-  Checkbox,
-  Show,
-} from "@chakra-ui/react";
+import { Box, Flex, Image, Input, Checkbox, Show } from "@chakra-ui/react";
 import React from "react";
 import BodyText from "../Components/TextElements/BodyText";
 import HeadingText from "../Components/TextElements/HeadingText";
 import ButtonDiv from "../Components/UIElements/Button";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 
 function Login(props) {
   return (
     <Box p="10">
       <Flex justifyContent={"flex-end"} w="100%">
         <Link
-          color="#5326FF"
-          fontSize={"13"}
-          textDecorationLine={"underline"}
-          fontWeight={"500"}
-          textAlign="right"
-          alignSelf={"flex-end"}
-          display="block"
-          href="/"
+          to="/"
+          style={{
+            color: "#7723FE",
+            textDecoration: "underline",
+            fontSize: 13,
+            fontWeight: 500,
+          }}
         >
           {" "}
           Go back to homepage
@@ -110,7 +102,10 @@ function Login(props) {
               <ButtonDiv w="100%">Login</ButtonDiv>
               <BodyText fontSize="14" mt="5" textAlign="center">
                 Dont have an account?{" "}
-                <Link href="/signup" color="#7723FE">
+                <Link
+                  to="/signup"
+                  style={{ color: "#7723FE", textDecoration: "underline" }}
+                >
                   Register
                 </Link>
               </BodyText>

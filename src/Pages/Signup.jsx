@@ -1,32 +1,25 @@
-import {
-  Link,
-  Box,
-  Flex,
-  Image,
-  Input,
-  Checkbox,
-  Show,
-} from "@chakra-ui/react";
+import { Box, Flex, Image, Input, Checkbox, Show } from "@chakra-ui/react";
 import React from "react";
 import BodyText from "../Components/TextElements/BodyText";
 import HeadingText from "../Components/TextElements/HeadingText";
 import ButtonDiv from "../Components/UIElements/Button";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 
 function Signup(props) {
   return (
     <Box p={["10px", "10px", "20px", "10"]}>
       <Flex justifyContent={"flex-end"} w="100%">
         <Link
-          color="#5326FF"
-          fontSize={"13"}
-          textDecorationLine={"underline"}
-          fontWeight={"500"}
-          textAlign="right"
-          alignSelf={"flex-end"}
-          display="block"
-          href="/"
+          to="/"
+          style={{
+            color: "#7723FE",
+            textDecoration: "underline",
+            fontSize: 13,
+            fontWeight: 500,
+          }}
         >
+          {" "}
           Go back to homepage
         </Link>
       </Flex>
@@ -76,7 +69,7 @@ function Signup(props) {
               my="5"
             >
               <Box w={["100%", "100%", "47%"]}>
-                <BodyText fontWeight="bold">Full name</BodyText>
+                <BodyText fontWeight="bold">Email</BodyText>
                 <Input
                   bg="#f5f5f5"
                   borderColor={"#f5f5f5"}
@@ -85,11 +78,12 @@ function Signup(props) {
                   borderRadius={"30"}
                   height="12"
                   my="3"
-                  placeholder="inedu joshua"
+                  placeholder="email@email.com"
+                  type="email"
                 />
               </Box>
               <Box w={["100%", "100%", "47%"]}>
-                <BodyText fontWeight="bold">Full name</BodyText>
+                <BodyText fontWeight="bold">Phone number</BodyText>
                 <Input
                   bg="#f5f5f5"
                   borderColor={"#f5f5f5"}
@@ -98,11 +92,12 @@ function Signup(props) {
                   borderRadius={"30"}
                   height="12"
                   my="3"
-                  placeholder="inedu joshua"
+                  placeholder="09064372891"
+                  type="number"
                 />
               </Box>
             </Flex>
-            <Box w={["100%", "100%", "47%"]}>
+            <Box w={["100%", "100%", "100%"]}>
               <BodyText fontWeight="bold">Password</BodyText>
               <Input
                 bg="#f5f5f5"
@@ -125,7 +120,10 @@ function Signup(props) {
               <ButtonDiv w="100%">Create Account</ButtonDiv>
               <BodyText fontSize="14" mt="5" textAlign="center">
                 Already have an account?{" "}
-                <Link href="/login" color="#7723FE">
+                <Link
+                  to="/login"
+                  style={{ color: "#7723FE", textDecoration: "underline" }}
+                >
                   Login
                 </Link>
               </BodyText>
